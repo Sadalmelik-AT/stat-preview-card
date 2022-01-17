@@ -60,6 +60,4 @@ I will continue to get more comfortable with Sass and media querie
 - [Joy Shaheb](https://www.youtube.com/channel/UCHG7IJuST_BXJkne-0u0Xtw) - This REALLY helped me understanding Media Queries more.
 
 ## Author
-
-- Frontend Mentor - [@PyZzi](https://www.frontendmentor.io/profile/pyzzie)
 - Twitter - [@sadalmel1k](https://www.twitter.com/sadalmel1k)
