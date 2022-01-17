@@ -34,7 +34,7 @@ body {
 }
 
 .post-card .image {
-  background-image: url(/images/image-header-mobile.jpg);
+  background-image: url(images/image-header-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   -o-object-fit: contain;
@@ -129,7 +129,7 @@ body {
     margin: 30px auto 0;
   }
   .post-card .image {
-    background-image: url(/images/image-header-desktop.jpg);
+    background-image: url(images/image-header-desktop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     -o-object-fit: contain;
@@ -230,7 +230,7 @@ body {
     overflow-y: hidden;
   }
   .post-card .image {
-    background-image: url(/images/image-header-mobile.jpg);
+    background-image: url(images/image-header-mobile.jpg);
     background-size: contain;
     -o-object-fit: contain;
        object-fit: contain;
