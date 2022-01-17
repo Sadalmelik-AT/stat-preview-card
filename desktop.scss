@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+$lexend: "Lexend Deca";
+$inter: "Inter";
+$main-bg: #090b1a;
+$card-bg: #1b1938;
+$accent: #aa5cdb;
+$accent-img: hsla(277, 88%, 28%, 0.527);
+$heading-stats: #ffffff;
+$main-paragraph: #ffffffbf;
+$stat-heading: #ffffff99;
+$mobile: 375px;
+$desktop: 1440px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $main-bg;
+  height: 100vh;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: $card-bg;
+  color: white;
+  margin: 50px auto 0;
+  height: 446px;
+  width: 1080px;
+  position: relative;
+  border-radius: 10px;
+
+  & .height-fix {
+    width: 538px;
+  }
+  & .image {
+    background-image: url(/images/image-header-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    position: relative;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  & .image::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: $accent-img;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  & .text {
+    width: 50%;
+    padding: 60px;
+
+    &__title {
+      font-size: 25px;
+      font-family: $inter;
+      font-weight: 700;
+      margin-bottom: 35px;
+
+      & span {
+        color: $accent;
+      }
+    }
+    &__paragraph {
+      margin-bottom: 35px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    &__stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 60px;
+
+      & span {
+        color: $heading-stats;
+        font-family: $inter;
+        font-size: 25px;
+        font-weight: 700;
+      }
+      & p {
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-family: $inter;
+      }
+    }
+  }
+}
+
+//Media queries
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: $main-bg;
+    height: 100vh;
+  }
+
+  .post-card {
+    background-color: $card-bg;
+    display: flex;
+    flex-direction: row-reverse;
+
+    width: 90%;
+    height: 446px;
+    margin: 30px auto 0;
+
+    & .image {
+      background-image: url(/images/image-header-desktop.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      object-fit: contain;
+      width: 50%;
+    }
+
+    & .text {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      padding: 30px;
+      box-sizing: border-box;
+
+      &__title {
+        color: $heading-stats;
+        font-family: $inter;
+        font-weight: 700;
+        margin-bottom: 30px;
+        font-size: 20px;
+        width: 100%;
+        & span {
+          color: $accent;
+        }
+      }
+      &__paragraph {
+        color: $main-paragraph;
+        line-height: 1.5;
+        font-family: $inter;
+        font-size: 12px;
+        width: 100%;
+      }
+      &__stat {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & [class^="text__stat-"] {
+          padding: 10px;
+          margin-left: -10px;
+          & span {
+            color: $heading-stats;
+            font-size: 20px;
+            font-family: $inter;
+            font-weight: 700;
+          }
+          & p {
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: $main-paragraph;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: $main-bg;
+  }
+
+  .height-fix {
+    min-height: 300px;
+  }
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 30px auto 0;
+    height: 1000px;
+    border-radius: 10px;
+    background-color: $card-bg;
+
+    overflow-y: hidden;
+
+    & .image {
+      background-image: url(/images/image-header-mobile.jpg);
+      background-size: contain;
+      object-fit: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 300px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      position: relative;
+    }
+
+    & .image::before {
+      content: "";
+      display: block;
+      background-color: $accent-img;
+      height: 86%;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    & .text {
+      width: 100%;
+      margin-top: -50px;
+      &__title {
+        font-family: $inter;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 20px;
+        color: $heading-stats;
+        & span {
+          color: $accent;
+        }
+      }
+      &__paragraph {
+        color: $main-paragraph;
+        font-size: 15px;
+        line-height: 2;
+        width: 100%;
+        margin: 10px auto 0;
+        text-align: center;
+      }
+
+      &__stat {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & [class^="text__stat-"] {
+          text-align: center;
+          margin: 25px;
+
+          & span {
+            font-family: $inter;
+            font-weight: 700;
+            font-size: 20px;
+            color: $heading-stats;
+          }
+
+          & p {
+            font-size: 12px;
+            color: $main-paragraph;
+            letter-spacing: 2px;
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
